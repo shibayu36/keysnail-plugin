@@ -38,14 +38,14 @@ ext.add("select-right-group", selectRightGroup, M({
 
 
 function selectLeftGroup () {
-    if (KeySnail.windowType != "navigator:browser" || !("TabGroupManager" in window))
+    if (KeySnail.windowType != "navigator:browser" || !("TabGroupsManager" in window))
         return;
 
     TabGroupsManager.command.SelectLeftGroup();
 }
 
 function selectRightGroup () {
-    if (KeySnail.windowType != "navigator:browser" || !("TabGroupManager" in window))
+    if (KeySnail.windowType != "navigator:browser" || !("TabGroupsManager" in window))
         return;
 
     TabGroupsManager.command.SelectRightGroup();
