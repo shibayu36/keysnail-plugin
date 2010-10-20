@@ -67,7 +67,7 @@ function openNewGroup () {
     if (KeySnail.windowType != "navigator:browser" || !("TabGroupsManager" in window))
         return;
 
-    TabGroupsManager.command.OpenNewGrouopActive();
+    TabGroupsManager.command.OpenNewGroupActive();
 }
 
 function closeCurrentGroup () {
