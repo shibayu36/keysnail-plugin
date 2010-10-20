@@ -4,7 +4,7 @@ var PLUGIN_INFO =
     <name lang="ja">TabGruop ScreenLike</name>
     <description>you can use TabGroupManager like screen</description>
     <description lang="ja">タブグループマネージャをスクリーンのように使用することが出来ます。</description>
-    <version>0.1</version>
+    <version>0.0.1</version>
     <updateURL></updateURL>
     <iconURL></iconURL>
     <author mail="shibayu36@gmail.com" homepage="http://d.hatena.ne.jp/shiba_yu36/">shiba_yu36</author>
@@ -13,8 +13,10 @@ var PLUGIN_INFO =
     <minVersion>1.0</minVersion>
     <include>main</include>
     <provides>
-        <ext>select-left-group</ext>
-        <ext>select-right-group</ext>
+        <ext>tabgroup-select-left-group</ext>
+        <ext>tabgroup-select-right-group</ext>
+        <ext>tabgroup-open-new-group</ext>
+        <ext>tabgroup-close-current-group</ext>
     </provides>
     <detail><![CDATA[
 === Usage ===
@@ -26,27 +28,22 @@ Nothing.
     ]]></detail>
 </KeySnailPlugin>;
 
-ext.add("select-left-group", selectLeftGroup, M({
+ext.add("tabgroup-select-left-group", selectLeftGroup, M({
     ja : "左のグループを選択",
     en : "select left group"
 }));
 
-ext.add("select-right-group", selectRightGroup, M({
+ext.add("tabgroup-select-right-group", selectRightGroup, M({
     ja : "右のグループを選択",
     en : "select right group"
 }));
 
-ext.add("select-right-group", selectRightGroup, M({
-    ja : "右のグループを選択",
-    en : "select right group"
-}));
-
-ext.add("open-new-group", openNewGroup, M({
+ext.add("tabgroup-open-new-group", openNewGroup, M({
     ja : "新しいグループを開く",
     en : "open new group"
 }));
 
-ext.add("close-current-group", closeCurrentGroup, M({
+ext.add("tabgroup-close-current-group", closeCurrentGroup, M({
     ja : "現在のグループを閉じる",
     en : "close current group"
 }));
