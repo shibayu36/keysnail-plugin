@@ -12,6 +12,10 @@ var PLUGIN_INFO =
     <license lang="ja">MIT ライセンス</license>
     <minVersion>1.0</minVersion>
     <include>main</include>
+    <provides>
+        <ext>select-left-group</ext>
+        <ext>select-right-group</ext>
+    </provides>
     <detail><![CDATA[
 === Usage ===
 Nothing.
@@ -21,3 +25,28 @@ Nothing.
 なし。
     ]]></detail>
 </KeySnailPlugin>;
+
+ext.add("select-left-group", selectLeftGroup, M({
+    ja : "左のグループを選択",
+    en : "select left group"
+}));
+
+ext.add("select-right-group", selectRightGroup, M({
+    ja : "右のグループを選択",
+    en : "select right group"
+}));
+
+
+function selectLeftGroup () {
+    if (KeySnail.windowType != "navigator:browser" || !("TabGroupManager" in window))
+        return;
+
+    TabGroupsManager.command.SelectLeftGroup();
+}
+
+function selectRightGroup () {
+    if (KeySnail.windowType != "navigator:browser" || !("TabGroupManager" in window))
+        return;
+
+    TabGroupsManager.command.SelectRightGroup();
+}
