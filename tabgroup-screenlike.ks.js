@@ -36,6 +36,21 @@ ext.add("select-right-group", selectRightGroup, M({
     en : "select right group"
 }));
 
+ext.add("select-right-group", selectRightGroup, M({
+    ja : "右のグループを選択",
+    en : "select right group"
+}));
+
+ext.add("open-new-group", openNewGroup, M({
+    ja : "新しいグループを開く",
+    en : "open new group"
+}));
+
+ext.add("close-current-group", closeCurrentGroup, M({
+    ja : "現在のグループを閉じる",
+    en : "close current group"
+}));
+
 
 function selectLeftGroup () {
     if (KeySnail.windowType != "navigator:browser" || !("TabGroupsManager" in window))
@@ -49,4 +64,18 @@ function selectRightGroup () {
         return;
 
     TabGroupsManager.command.SelectRightGroup();
+}
+
+function openNewGroup () {
+    if (KeySnail.windowType != "navigator:browser" || !("TabGroupsManager" in window))
+        return;
+
+    TabGroupsManager.command.OpenNewGrouopActive();
+}
+
+function closeCurrentGroup () {
+    if (KeySnail.windowType != "navigator:browser" || !("TabGroupsManager" in window))
+        return;
+
+    TabGroupsManager.command.CloseActiveGroup();
 }
