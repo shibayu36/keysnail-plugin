@@ -5,7 +5,7 @@ var PLUGIN_INFO =
     <description>you can use TabGroupManager like elscreen</description>
     <description lang="ja">タブグループマネージャをelscreenのように使用することが出来ます。</description>
     <version>0.0.1</version>
-    <updateURL>http://github.com/shiba-yu36/keysnail-plugin/raw/master/tabgroup-screenlike.ks.js</updateURL>
+    <updateURL>http://github.com/shiba-yu36/keysnail-plugin/raw/master/tabgroup-elscreenlike.ks.js</updateURL>
     <iconURL></iconURL>
     <author mail="shibayu36@gmail.com" homepage="http://d.hatena.ne.jp/shiba_yu36/">shiba_yu36</author>
     <license>The MIT License</license>
