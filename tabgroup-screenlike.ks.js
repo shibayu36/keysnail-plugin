@@ -54,6 +54,7 @@ function selectLeftGroup () {
         return;
 
     TabGroupsManager.command.SelectLeftGroup();
+    window.focus();
 }
 
 function selectRightGroup () {
@@ -61,6 +62,7 @@ function selectRightGroup () {
         return;
 
     TabGroupsManager.command.SelectRightGroup();
+    window.focus();
 }
 
 function openNewGroup () {
