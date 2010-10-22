@@ -18,6 +18,7 @@ var PLUGIN_INFO =
         <ext>tabgroup-goto</ext>
         <ext>tabgroup-create</ext>
         <ext>tabgroup-close</ext>
+        <ext>tabgroup-group-nickname</ext>
     </provides>
     <detail><![CDATA[
 === Usage ===
@@ -52,6 +53,11 @@ ext.add("tabgroup-create", openNewGroup, M({
 ext.add("tabgroup-close", closeCurrentGroup, M({
     ja : "現在のグループを閉じる",
     en : "close current group"
+}));
+
+ext.add("tabgroup-group-nickname", renameCurrentGroup, M({
+    ja : "現在のグループの名前を変更する",
+    en : "rename current group"
 }));
 
 
@@ -98,8 +104,17 @@ function closeCurrentGroup () {
     TabGroupsManager.command.CloseActiveGroup();
 }
 
+function renameCurrentGroup () {
+    if (KeySnail.windowType != "navigator:browser" || !("TabGroupsManager" in window))
+        return;
+
+    var current_group = TabGroupsManager.allGroups.selectedGroup;
+    prompt.read("set group title to: ", function (group_name) {
+        current_group.renameByText(group_name);
+    });
+}
+
 function focusContent() {
     getBrowser().focus();
     _content.focus();
 }
-
