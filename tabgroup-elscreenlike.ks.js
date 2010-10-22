@@ -24,7 +24,7 @@ var PLUGIN_INFO =
     <detail lang="ja"><![CDATA[
 === 使い方 ===
 　このプラグインをインストールすることにより、firefoxのaddonであるタブグループマネージャをelscreenのように使うことができるようになります。
-  [https://addons.mozilla.org/ja/firefox/addon/10254/]からタブグループマネージャをインストールしてから利用してください。
+  https://addons.mozilla.org/ja/firefox/addon/10254/からタブグループマネージャをインストールしてから利用してください。
     ]]></detail>
 </KeySnailPlugin>;
 
