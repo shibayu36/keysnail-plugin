@@ -62,7 +62,7 @@ function selectRightGroup () {
         return;
 
     TabGroupsManager.command.SelectRightGroup();
-    window.focus();
+    TabGroupsManager.allGroups.groupbar.selectedItem.focus();
 }
 
 function openNewGroup () {
@@ -70,6 +70,7 @@ function openNewGroup () {
         return;
 
     TabGroupsManager.command.OpenNewGroupActive();
+    TabGroupsManager.allGroups.groupbar.selectedItem.focus();
 }
 
 function closeCurrentGroup () {
