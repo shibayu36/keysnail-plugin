@@ -4,7 +4,7 @@ var PLUGIN_INFO =
     <name lang="ja">TabGruop ElcreenLike</name>
     <description>you can use TabGroupManager like elscreen</description>
     <description lang="ja">タブグループマネージャをelscreenのように使用することが出来ます。</description>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <updateURL>http://github.com/shiba-yu36/keysnail-plugin/raw/master/tabgroup-elscreenlike.ks.js</updateURL>
     <iconURL></iconURL>
     <author mail="shibayu36@gmail.com" homepage="http://d.hatena.ne.jp/shiba_yu36/">shiba_yu36</author>
@@ -28,6 +28,16 @@ var PLUGIN_INFO =
   https://addons.mozilla.org/ja/firefox/addon/10254/
     ]]></detail>
 </KeySnailPlugin>;
+
+// ChangeLog : {{{
+//
+// ==== 0.0.2 (2010 12/30) ====
+// タブグループを閉じるときはダイアログを表示するように
+//
+// ==== 0.0.1 ====
+// リリース
+//
+// }}}
 
 ext.add("tabgroup-previous", selectPreviousGroup, M({
     ja : "左のグループを選択",
@@ -111,7 +121,9 @@ function closeCurrentGroup () {
     if (KeySnail.windowType != "navigator:browser" || !("TabGroupsManager" in window))
         return;
 
-    TabGroupsManager.command.CloseActiveGroup();
+    if (window.confirm(L("このグループを閉じてもよいですか？"))) {
+        TabGroupsManager.command.CloseActiveGroup();
+    }
 }
 
 function renameCurrentGroup () {
