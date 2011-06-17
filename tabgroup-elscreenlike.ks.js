@@ -1,7 +1,7 @@
 var PLUGIN_INFO =
 <KeySnailPlugin>
-    <name>TabGroup ElcreenLike</name>
-    <name lang="ja">TabGruop ElcreenLike</name>
+    <name>TabGroup ElscreenLike</name>
+    <name lang="ja">TabGruop ElscreenLike</name>
     <description>you can use TabGroupManager like elscreen</description>
     <description lang="ja">タブグループマネージャをelscreenのように使用することが出来ます。</description>
     <version>0.0.2</version>
