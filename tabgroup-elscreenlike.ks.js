@@ -147,7 +147,7 @@ function  gotoLastSelectedGroup () {
 }
 
 function focusContent() {
-    // getBrowser().focus();
+    getBrowser().focus();
     _content.focus();
 }
 
