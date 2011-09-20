@@ -85,8 +85,7 @@ function selectPreviousGroup () {
         return;
 
     saveCurrentGroupIndex();
-    TabGroupsManager.command.SelectLeftGroup();
-    focusContent();
+    TabGroupsManager.allGroups.selectNthGroup(getLeftGroupIndex());
 }
 
 function selectNextGroup () {
@@ -94,8 +93,7 @@ function selectNextGroup () {
         return;
 
     saveCurrentGroupIndex();
-    TabGroupsManager.command.SelectRightGroup();
-    focusContent();
+    TabGroupsManager.allGroups.selectNthGroup(getRightGroupIndex());
 }
 
 function selectNthGroup () {
@@ -107,8 +105,7 @@ function selectNthGroup () {
             return;
 
         saveCurrentGroupIndex();
-        TabGroupsManager.command.SelectNthGroup(group_index);
-        focusContent();
+        TabGroupsManager.allGroups.selectNthGroup(group_index);
     });
 }
 
@@ -149,14 +146,30 @@ function  gotoLastSelectedGroup () {
     setLastSelectedGroup(current_index);
 }
 
-function focusContent() {
-    let (elem = document.commandDispatcher.focusedElement) elem && elem.blur();
-    gBrowser.focus();
-    content.focus();
-}
-
 function saveCurrentGroupIndex () {
     last_selected_group_index = TabGroupsManager.allGroups.groupbar.selectedIndex;
+}
+
+function getRightGroupIndex () {
+    var group_count = TabGroupsManager.allGroups.groupbar.itemCount;
+    var current_index = TabGroupsManager.allGroups.groupbar.selectedIndex;
+    if (current_index == group_count - 1) {
+        return 0;
+    }
+    else {
+        return current_index + 1;
+    }
+}
+
+function getLeftGroupIndex () {
+    var group_count = TabGroupsManager.allGroups.groupbar.itemCount;
+    var current_index = TabGroupsManager.allGroups.groupbar.selectedIndex;
+    if (current_index == 0) {
+        return group_count - 1;
+    }
+    else {
+        return current_index - 1;
+    }
 }
 
 function getLastSelectedGroup() {
