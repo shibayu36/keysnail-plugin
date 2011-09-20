@@ -150,9 +150,8 @@ function  gotoLastSelectedGroup () {
 }
 
 function focusContent() {
-    // getBrowser().focus();
-    // _content.focus();
-    document.focus();
+    getBrowser().focus();
+    _content.focus();
 }
 
 function saveCurrentGroupIndex () {
