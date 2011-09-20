@@ -147,8 +147,9 @@ function  gotoLastSelectedGroup () {
 }
 
 function focusContent() {
-    getBrowser().focus();
-    _content.focus();
+    // getBrowser().focus();
+    // _content.focus();
+    content.focus();
 }
 
 function saveCurrentGroupIndex () {
