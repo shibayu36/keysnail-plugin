@@ -150,8 +150,9 @@ function  gotoLastSelectedGroup () {
 }
 
 function focusContent() {
-    getBrowser().focus();
-    _content.focus();
+    let (elem = document.commandDispatcher.focusedElement) elem && elem.blur();
+    gBrowser.focus();
+    content.focus();
 }
 
 function saveCurrentGroupIndex () {
