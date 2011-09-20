@@ -4,7 +4,7 @@ var PLUGIN_INFO =
     <name lang="ja">TabGruop ElscreenLike</name>
     <description>you can use TabGroupManager like elscreen</description>
     <description lang="ja">タブグループマネージャをelscreenのように使用することが出来ます。</description>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <updateURL>http://github.com/shiba-yu36/keysnail-plugin/raw/master/tabgroup-elscreenlike.ks.js</updateURL>
     <iconURL></iconURL>
     <author mail="shibayu36@gmail.com" homepage="http://d.hatena.ne.jp/shiba_yu36/">shiba_yu36</author>
@@ -31,6 +31,9 @@ var PLUGIN_INFO =
 
 // ChangeLog : {{{
 //
+// ==== 0.0.3 (2010 12/30) ====
+// fix bug in content focus
+// 
 // ==== 0.0.2 (2010 12/30) ====
 // タブグループを閉じるときはダイアログを表示するように
 //
