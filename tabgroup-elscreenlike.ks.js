@@ -147,9 +147,8 @@ function  gotoLastSelectedGroup () {
 }
 
 function focusContent() {
-    document.getElementById("searchbar").focus();
-    document.commandDispatcher.advanceFocus();
-    document.commandDispatcher.advanceFocus();
+    getBrowser().focus();
+    _content.focus();
 }
 
 function saveCurrentGroupIndex () {
